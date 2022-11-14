@@ -1,0 +1,19 @@
+{
+  "name": "javascript-website",
+  "version": "1.0.0",
+  "description": "First experience with npm",
+  "main": "helloworld.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeWolski/JavaScript-Website.git"
+  },
+  "author": "Mike Wolski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MikeWolski/JavaScript-Website/issues"
+  },
+  "homepage": "https://github.com/MikeWolski/JavaScript-Website#readme"
+}
