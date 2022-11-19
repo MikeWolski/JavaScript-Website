@@ -18,6 +18,18 @@
             </table>
         </nav>
         <hr>
+        <p id="clock" align="center"></p>
+		<script>
+			function printTime() {
+				var d = new Date();
+				var hours = d.getHours();
+				var mins = d.getMinutes();
+				var secs = d.getSeconds();
+				var clock = document.getElementById("clock")
+				clock.innerHTML = hours+":"+mins+":"+secs;
+			}
+			setInterval(printTime, 100);
+		</script>
         <h1>About</h1>
         <p>Welcome to my about page!</p>
     </body>
