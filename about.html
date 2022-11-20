@@ -11,14 +11,14 @@
             <table width="40%" bgcolor=#D5FF51 align="center">
                 <tr>
                 <td><a href="index.html"><center>Home</center></a></td>
-                <td><a href="products.html"><center>Products</center></a></td>
+                <td><a href="products.html"><center>Projects</center></a></td>
                 <td><a href="services.html"><center>Certifications</center></a></td>
                 <td><a href="about.html"><center>About</center></a></td>
                 </tr>
             </table>
         </nav>
         <hr>
-        <p id="clock" align="center"></p>
+        <p id="clock" align="center" onclick="time()"></p>
 		<script>
 			function printTime() {
 				var d = new Date();
@@ -29,6 +29,9 @@
 				clock.innerHTML = hours+":"+mins+":"+secs;
 			}
 			setInterval(printTime, 100);
+            function time() {
+                alert("You found the clock!");
+            }
 		</script>
         <h1>About</h1>
         <p>Welcome to my about page!</p>
