@@ -1,0 +1,258 @@
+type: custom:popup-card
+entity: media_player.tv_tv
+card:
+  type: vertical-stack
+  cards:
+    - square: false
+      columns: 3
+      type: grid
+      cards:
+        - show_name: false
+          show_icon: true
+          type: custom:button-card
+          icon: mdi:power
+          hold_action:
+            action: none
+          entity: media_player.tv_tv
+          show_state: false
+          tap_action:
+            action: toggle
+        - type: custom:button-card
+          icon: mdi:arrow-up-bold
+          tap_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: DPAD_UP
+            target:
+              entity_id: remote.tv_tv
+          hold_action:
+            action: none
+        - type: custom:button-card
+          show_icon: false
+          tap_action:
+            action: none
+          hold_action:
+            action: none
+        - type: custom:button-card
+          icon: mdi:arrow-left-bold
+          tap_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: DPAD_LEFT
+            target:
+              entity_id: remote.tv_tv
+          hold_action:
+            action: none
+        - type: custom:button-card
+          icon: mdi:circle
+          tap_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: DPAD_CENTER
+            target:
+              entity_id: remote.tv_tv
+          hold_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: DPAD_CENTER
+              hold_secs: 0.5
+            target:
+              entity_id: remote.tv_tv
+        - type: custom:button-card
+          icon: mdi:arrow-right-bold
+          tap_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: DPAD_RIGHT
+            target:
+              entity_id: remote.tv_tv
+          hold_action:
+            action: none
+        - type: custom:button-card
+          icon: mdi:arrow-left
+          tap_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: BACK
+            target:
+              entity_id: remote.tv_tv
+          hold_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: BACK
+              hold_secs: 0.5
+            target:
+              entity_id: remote.tv_tv
+        - type: custom:button-card
+          icon: mdi:arrow-down-bold
+          tap_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: DPAD_DOWN
+            target:
+              entity_id: remote.tv_tv
+          hold_action:
+            action: none
+        - type: custom:button-card
+          icon: mdi:home-outline
+          tap_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: HOME
+            target:
+              entity_id: remote.tv_tv
+          hold_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: HOME
+              hold_secs: 0.5
+            target:
+              entity_id: remote.tv_tv
+    - square: false
+      columns: 3
+      type: grid
+      cards:
+        - type: custom:button-card
+          icon: mdi:skip-previous
+          tap_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: MEDIA_PREVIOUS
+            target:
+              entity_id: remote.tv_tv
+          hold_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: MEDIA_REWIND
+            target:
+              entity_id: remote.tv_tv
+        - type: custom:button-card
+          icon: mdi:play-pause
+          tap_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: MEDIA_PLAY_PAUSE
+            target:
+              entity_id: remote.tv_tv
+          hold_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: MEDIA_STOP
+            target:
+              entity_id: remote.tv_tv
+        - type: custom:button-card
+          icon: mdi:skip-next
+          tap_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: MEDIA_NEXT
+            target:
+              entity_id: remote.tv_tv
+          hold_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: MEDIA_FAST_FORWARD
+            target:
+              entity_id: remote.tv_tv
+        - type: custom:button-card
+          icon: mdi:volume-off
+          tap_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: MUTE
+            target:
+              entity_id: remote.tv_tv
+          hold_action:
+            action: none
+        - type: custom:button-card
+          icon: mdi:volume-medium
+          tap_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: VOLUME_DOWN
+            target:
+              entity_id: remote.tv_tv
+          hold_action:
+            action: none
+        - type: custom:button-card
+          icon: mdi:volume-high
+          tap_action:
+            action: call-service
+            service: remote.send_command
+            data:
+              command: VOLUME_UP
+            target:
+              entity_id: remote.tv_tv
+          hold_action:
+            action: none
+    - square: false
+      columns: 4
+      type: grid
+      cards:
+        - type: custom:button-card
+          icon: mdi:youtube
+          tap_action:
+            action: call-service
+            service: remote.turn_on
+            data:
+              activity: https://www.youtube.com
+            target:
+              entity_id: remote.tv_tv
+          hold_action:
+            action: none
+        - type: custom:button-card
+          icon: mdi:netflix
+          tap_action:
+            action: call-service
+            service: remote.turn_on
+            data:
+              activity: https://www.netflix.com/title
+            target:
+              entity_id: remote.tv_tv
+          hold_action:
+            action: none
+        - type: picture
+          image: >-
+            https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Amazon_Prime_Video_logo.svg/450px-Amazon_Prime_Video_logo.svg.png
+          tap_action:
+            action: call-service
+            service: remote.turn_on
+            data:
+              activity: https://app.primevideo.com
+            target:
+              entity_id: remote.tv_tv
+          hold_action:
+            action: none
+        - type: custom:button-card
+          icon: mdi:panorama-horizontal
+          tap_action:
+            action: call-service
+            service: remote.turn_on
+            data:
+              activity: com.stremio.one
+            target:
+              entity_id: remote.tv_tv
+          hold_action:
+            action: none
+    - type: media-control
+      entity: media_player.tv_tv
+right_button: Exit
+title: Loft TV
